@@ -1,3 +1,46 @@
 .contentContainer{
-    background-color: aqua;
+    border: 1px solid black;
+    background-color: #1E1E1E;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.infosContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    width: 30vw;
+    margin-right: 100px;
+}
+
+.welcomeText{
+    margin-left: 1rem;
+    font-size: 24px;
+}
+
+.title{
+    font-size: 72px;
+}
+
+.priceText{
+    font-size: 24px;
+}
+
+.buttonSubscribe{
+    background-color: #EBA417;
+    height: 64px;
+    width: 260px;
+    border-radius: 100px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.orangeColor{
+    color: #FF4B33;
 }
