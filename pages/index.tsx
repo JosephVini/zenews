@@ -1,18 +1,11 @@
-import { useState } from "react"
-import { Modal } from "./components/Modal"
 import Image from "next/image"
 import iconHand from "../public/images/IconHand.svg"
-import mainImage from "../public/images/avatar1.svg"
+import mainImage from "../public/images/avatar.svg"
 
 import styles from "./home.module.scss"
 
 export default function Home() {
-  let [open,setOpen] = useState(false)
-  function openModal() {
-    setOpen(
-      open = !open
-    )
-  }
+
   return (
     <main className={styles.contentContainer}>
       <section className={styles.infosContainer}>
