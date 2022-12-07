@@ -11,7 +11,9 @@ export function Header() {
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <h1>
-                    Zé<span>.news</span>
+                    <Link href="/">
+                        Zé<span>.news</span>
+                    </Link>
                 </h1>
                 <nav>
                     <ActiveLink activeClassName={styles.active} href="/">

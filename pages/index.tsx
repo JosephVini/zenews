@@ -3,6 +3,7 @@ import Image from "next/image"
 import Head from "next/head"
 import iconHand from "../public/images/IconHand.svg"
 import mainImage from "../public/images/avatar.svg"
+import Link from "next/link"
 
 import styles from "./home.module.scss"
 import { SubscribeButton } from "../components/SubscribeButton"
