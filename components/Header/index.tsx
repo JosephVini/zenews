@@ -1,4 +1,6 @@
 import { useSession } from "next-auth/react";
+import Link from "next/link";
+import { ActiveLink } from "../ActiveLink";
 import { SignInButton } from "../SignInButton";
 import styles from "./styles.module.scss";
 
@@ -12,8 +14,12 @@ export function Header() {
                     Zé<span>.news</span>
                 </h1>
                 <nav>
-                    <a className={styles.active}>Home</a>
-                    <a>Notícias</a>
+                    <ActiveLink activeClassName={styles.active} href="/">
+                        <p>Home</p>
+                    </ActiveLink>
+                    <ActiveLink activeClassName={styles.active} href="/news" prefetch>
+                        <p>Notícias</p>
+                    </ActiveLink>
                 </nav>
 
                 {status === "authenticated" ? (
