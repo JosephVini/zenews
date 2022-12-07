@@ -28,14 +28,17 @@ export default function Home({ product }: HomeProps) {
             👏
             <span className={styles.welcomeText}>Hey, Seja bem vindo!</span>
           </div>
+
           <h1 className={styles.title}>Notícias sobre <span>Tecnologia</span></h1>
           <p className={styles.priceText}>Tenha acesso a conteúdos de tecnologias <span>por {product.amount}/mês</span></p>
+
           <SubscribeButton priceId={product.priceId} />
         </section>
         <Image src={mainImage} alt="" width={500} height={500} />
       </main>
     </>
   )
+
 }
 
 export const getStaticProps: GetStaticProps = async () => {
