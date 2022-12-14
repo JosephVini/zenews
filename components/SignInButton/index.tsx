@@ -5,10 +5,10 @@ import Image from "next/image"
 import styles from "./styles.module.scss";
 
 interface PropsType {
-    title: string;
+    title?: string;
     color?: string;
-    icon: string;
-    signInWith: string;
+    icon?: string;
+    signInWith?: string;
 }
 
 export function SignInButton(props: PropsType) {
@@ -16,12 +16,12 @@ export function SignInButton(props: PropsType) {
 
     console.log(data);
     return data ? (
-        <button 
-            className={styles.signInButton} 
+        <button
+            className={styles.signInButton}
             type="button"
             onClick={() => signOut()}
         >
-            {(status === "authenticated" && data.user?.image) ? <Image src={data.user?.image as string} alt='' width={32} height={32} /> : props.icon === "Github" ? <FaGithub color="#04D361" /> : <FaGoogle color="#04D361" /> }
+            {(status === "authenticated" && data.user?.image) ? <Image src={data.user?.image as string} alt='' width={32} height={32} /> : props.icon === "Github" ? <FaGithub color="#04D361" /> : <FaGoogle color="#04D361" />}
             {data.user?.name}
             <FiX color="#737380" className={styles.closeIcon} />
         </button>
